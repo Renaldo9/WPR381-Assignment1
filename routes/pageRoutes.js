@@ -2,20 +2,16 @@
 
 const express = require('express');
 const router = express.Router();
+const mainController = require('../controllers/mainController')
 
-router.get('/', (req, res) => {
-});
+// Link routes to controller methods
+router.get('/', mainController.home);
+router.get('/about', mainController.about);
+router.get('/events', mainController.events);
+router.get('/contact', mainController.contact);
+router.get('/thankyou', mainController.thankyou);
 
-router.get('/about', (req, res) => {
-});
-
-router.get('/events', (req, res) => {
-});
-
-router.get('/contact', (req, res) => {
-});
-
-router.get('/thankyou', (req, res) => {
-});
+// Contact us message submited
+router.post('/contact', mainController.submitContact);
 
 module.exports = router;
