@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    min-height: 10vh;
+    background-color: grey;
+    background-image: url("/images/hello.jpg");
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+h1{
+    font-size: 60px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+}
+
+a:hover {
+    color: green;
+}
+
+/* navigation bar */
+nav {
+
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: flex-end; 
+    gap: 1rem;
+}
+
+/* footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+/*About box*/
+.aboutBox {
+    background-color: rgba(102, 86, 86, 0.2);
+    backdrop-filter: blur(5px); 
+    border-radius: 10px;
+    position: absolute;
+    top: 36%;
+    left: 30%;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    color: black;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact form */
+.contactForm{
+     background-color: rgba(7, 6, 6, 0.2); 
+    backdrop-filter: blur(5px); 
+    border-radius: 10px;
+    position: absolute;
+    top: 36%;
+    left: 36%;
+    width: 29%;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 8000px;
+    color: black;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contactForm input, .contactForm textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(26, 25, 25, 0.199);
+    border-radius: 5px;
+    background-color: rgb(255, 238, 238);
+    color: rgb(0, 0, 0);
+}
+
+.contactForm button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+}
+
+.contactForm button:hover {
+    background-color: #031d04;
+}
+
+/* Events box*/
+.eventsBox {
+    background-color: rgba(102, 86, 86, 0.2); 
+    backdrop-filter: blur(5px); 
+    border-radius: 10px;
+    position: absolute;
+    top: 36%;
+    left: 42%;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    color: black;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Thank you box */
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.ThankYou{
+    font-weight: 200;
+    font-size: 120%;
+    background-color: rgba(102, 86, 86, 0.2); 
+    backdrop-filter: blur(5px); 
+    border-radius: 10px;
+    position: absolute;
+    top: 36%;
+    left: 41%;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    color: rgb(0, 26, 0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* Animated element */
+.ThankYou::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: 10px;
+  background: conic-gradient( from var(--angle),  transparent 70%,  rgb(0, 223, 212),  rgb(21, 204, 21) );
+  animation: spin 3s linear infinite;
+  padding: 3px;
+}
+
+.ThankYou::before {
+ animation: spin 3s linear infinite;
+  filter: blur(15px);
+  opacity: 0.3;
+}
+
+@keyframes spin {
+  to {
+    --angle: 360deg;
+  }
+}
