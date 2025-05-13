@@ -1,17 +1,14 @@
 <%- include('../partials/header') %>
-    <h1><%= title %></h1>
-    
-    <div class ="aboutBox">
-       
-            <% if (team && team.length) { %>
-            <% team.forEach(member => { %>
-            <section class="team-member">
-                <h2><%= member.name %> — <%= member.role %></h2>
-                <p><%= member.bio %></p>
-            </section>
-            <% }) %>
-        <% } else { %>
-            <p>No team information available at this time.</p>
-        <% } %>
-    </div>
+<h1><%= title %></h1>
+
+<div class="aboutBox">
+  <% if (team && team.length) { %> <% team.forEach(member => { %>
+  <section class="team-member">
+    <h2><%= member.name %> — <%= member.role %></h2>
+    <p><%= member.bio %></p>
+  </section>
+  <% }) %> <% } else { %>
+  <p>No team information available at this time.</p>
+  <% } %>
+</div>
 <%- include('../partials/footer') %>

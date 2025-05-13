@@ -6,17 +6,21 @@
   <h2>Upcoming Events</h2>
 
   <% if (upcomingEvents && upcomingEvents.length) { %>
-    <ul>
-      <% upcomingEvents.forEach(event => { %>
-        <li>
-          <strong><%= event.title %></strong><br>
-          <%= event.date %> @ <%= event.location %><br>
-          <img src="/images/<%= event.image %>" alt="<%= event.title %>" style="max-width:200px;">
-        </li>
-      <% }) %>
-    </ul>
+  <ul>
+    <% upcomingEvents.forEach(event => { %>
+    <li>
+      <strong><%= event.title %></strong><br />
+      <%= event.date %> @ <%= event.location %><br />
+      <img
+        src="/images/<%= event.image %>"
+        alt="<%= event.title %>"
+        style="max-width: 200px"
+      />
+    </li>
+    <% }) %>
+  </ul>
   <% } else { %>
-    <p>No upcoming events right now.</p>
+  <p>No upcoming events right now.</p>
   <% } %>
 </section>
 

@@ -3,23 +3,23 @@
 <h1><%= title %></h1>
 
 <div class="eventsBox">
- 
-  <% if (events && events.length > 0) { %>
-    <% events.forEach(event => { %>
-      <div class="eventCard">
-        <img src="/images/<%= event.image %>" alt="<%= event.title %>" class="eventImage" />
-        <div class="eventDetails">
-          <h2><%= event.title %></h2>
-          <p><strong>Date:</strong> <%= event.date %></p>
-          <p><strong>Location:</strong> <%= event.location %></p>
-          <p><%= event.description %></p>
-        </div>
-      </div>
-    <% }) %>
-  <% } else { %>
-    <p>No upcoming events at this time.</p>
+  <% if (events && events.length > 0) { %> <% events.forEach(event => { %>
+  <div class="eventCard">
+    <img
+      src="/images/<%= event.image %>"
+      alt="<%= event.title %>"
+      class="eventImage"
+    />
+    <div class="eventDetails">
+      <h2><%= event.title %></h2>
+      <p><strong>Date:</strong> <%= event.date %></p>
+      <p><strong>Location:</strong> <%= event.location %></p>
+      <p><%= event.description %></p>
+    </div>
+  </div>
+  <% }) %> <% } else { %>
+  <p>No upcoming events at this time.</p>
   <% } %>
-
 </div>
 
 <%- include('../partials/footer') %>
