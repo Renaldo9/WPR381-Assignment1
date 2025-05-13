@@ -11,7 +11,7 @@ router.get('/events', mainController.events);
 router.get('/contact', mainController.contact);
 router.get('/thankyou', mainController.thankyou);
 
-// Contact us message submited
+router.use(express.urlencoded({ extended: true }));
 router.post('/contact', mainController.submitContact);
 
 module.exports = router;
