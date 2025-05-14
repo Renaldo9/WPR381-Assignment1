@@ -1,5 +1,7 @@
 # Community Portal Project
 
+https://github.com/Renaldo9/WPR381-Assignment1
+
 ## Overview
 
 The Dynamic Community Portal Website is a full-stack web application developed using Node.js, Express, and EJS templating, designed to serve as an engaging, informative platform for a local community or organization. It features dynamic content rendering, modular routing, and responsive styling.
